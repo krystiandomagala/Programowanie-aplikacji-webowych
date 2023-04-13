@@ -1,0 +1,56 @@
+<div>
+  <h2>Właściwości CSS</h2>
+  <div>
+    Kolor <br /><input type="text" [(ngModel)]="css.color" />
+  </div>
+  <br />
+  <div>
+    Kolor tła <br><input type="text" [(ngModel)]="css.background" />
+  </div>
+  <br />
+  <div>
+    Obramowanie <br><input type="text" [(ngModel)]="css.border" />
+  </div>
+  <br />
+  <div>
+    Styl czcionki <br><input type="text" [(ngModel)]="css.fontStyle" />
+  </div>
+  <br />
+  <button (click)="onGenerateCSS()">Wygeneruj CSS</button>
+</div>
+
+<br />
+
+<h2>Komponenty</h2>
+<div style="max-width: 300px">
+  <button
+      [style.color]="css.color"
+      [style.background]="css.background"
+      [style.fontStyle]="css.fontStyle"
+      [style.border]="css.border"
+  >Some button</button>
+
+  <br />
+  <br />
+
+  <div
+      [style.color]="css.color"
+      [style.background]="css.background"
+      [style.fontStyle]="css.fontStyle"
+      [style.border]="css.border"
+  >Some div</div>
+
+  <br />
+
+  Some input <input type="text"
+      [style.color]="css.color"
+      [style.background]="css.background"
+      [style.fontStyle]="css.fontStyle"
+      [style.border]="css.border"
+      value="some input data"
+  >
+</div>
+
+<br />
+
+<h2>Style</h2>
